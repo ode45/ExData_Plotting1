@@ -34,7 +34,7 @@ legend("topright",lty=c(1,1),col=c("black","red", "blue"),
 
 ############ Create the fourth plot
 with(hdata, plot(datetime,Global_reactive_power,type="n"))
-with(hdata, lines(datetime,Global_reactive_power,lwd=10))
+with(hdata, lines(datetime,Global_reactive_power))
 
 
 
