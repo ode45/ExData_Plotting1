@@ -1,5 +1,5 @@
-# This script loahdata the hdataset and manipulates it into a variable called hdata
-# with the 2 days as specified and additional datetime field
+# This script loads the dataset and manipulates it into a variable called hdata
+# of the 2 days as specified and creates an additional datetime field
 
 # Create the hdata variable if it doesn't exist in in the global environment
 if (!exists("hdata")) {
