@@ -4,6 +4,7 @@
 source('loadData.R')
 
 # Open the PNG graphics device
+# Use a white background, then they look the same as in the Markdown example, although the actuals are transparent
 png("plot1.png", width=480, height=480, bg="white")
 
 # Create the plot

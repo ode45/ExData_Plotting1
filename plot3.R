@@ -4,7 +4,8 @@
 source('loadData.R')
 
 # Open the PNG graphics device
-png("plot3.png", width=480, height=480, bg="white")
+# Use a white background, then they look the same as in the Markdown example, although the actuals are transparent
+#png("plot3.png", width=480, height=480, bg="white")
 
 # To make sure the days are in English
 Sys.setlocale("LC_TIME", "English")
@@ -16,9 +17,8 @@ with(hdata, lines(datetime,Sub_metering_2, col="red"))
 with(hdata, lines(datetime,Sub_metering_3, col="blue"))
 
 # Add the legend
-legend("topright",lty=c(1,1),col=c("black","red", "blue"), 
+legend("topright",lty=1,col=c("black","red", "blue"), cex=.95,
        legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
-
 # Shut down the graphics device
-dev.off()
+#dev.off()

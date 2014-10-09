@@ -1,5 +1,12 @@
-# This script loads the dataset and manipulates it into a variable called hdata
-# of the 2 days as specified and creates an additional datetime field
+# This script loahdata the hdataset and manipulates it into a variable called hdata
+# with the 2 days as specified and additional datetime field
+
+# Function to install package if needed and to then load it
+usePackage <- function(p) {
+  if (!require(p, character.only = TRUE))
+    install.packages(p)
+  suppressPackageStartupMessages(library(p,character.only=TRUE))
+}
 
 # Create the hdata variable if it doesn't exist in in the global environment
 if (!exists("hdata")) {
@@ -12,8 +19,8 @@ if (!exists("hdata")) {
     unzip(destfile)
   }
   
-  # Lubridate provides tools that make it easier to parse and manipulate dates.
-  require(lubridate) || install.packages('lubridate') 
+  # Lubridate provides tools that make it easier to parse and manipulate dates
+  usePackage(lubridate)
   
   # Read the file
   file <- "household_power_consumption.txt"
